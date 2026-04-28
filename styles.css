@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #4e90c7;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #111;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* OVERLAY (fondo oscuro al abrir menú) */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* MENÚ */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #222;
+    padding-top: 60px;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+/* ESTADO ACTIVO */
+.menu.active {
+    transform: translateX(260px);
+}
+
+/* overlay activo */
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.menu a:hover {
+    background: #444;
+}
+
+/* CALCULADORA */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.calculadora {
+    background: 2c2c3e;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px  rgb(11, 18, 186);
+}
+
+#pantalla {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: right;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
